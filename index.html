@@ -4,122 +4,158 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GBChinese</title>
-  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Global */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif;}
+    body { line-height: 1.6; background: #fff8f0; color: #222;}
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #E63946, #FFB703);
+      color: #fff;
+      text-align: center;
+      padding: 5rem 1rem;
+    }
+    header h1 { font-size: 3rem; margin-bottom: 1rem; }
+    header p { font-size: 1.3rem; margin-bottom: 2rem; }
+    .cta-btn {
+      background-color: #222;
+      color: #fff;
+      padding: 1rem 2rem;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .cta-btn:hover { background-color: #444; }
+
+    /* Sections */
+    section { max-width: 1200px; margin: 4rem auto; padding: 0 1rem; }
+    section h2 { text-align: center; font-size: 2rem; margin-bottom: 2rem; color: #E63946; }
+
+    /* About */
+    .about p { text-align: center; font-size: 1.2rem; max-width: 800px; margin: auto; }
+
+    /* Menu */
+    .menu-category { margin-bottom: 3rem; }
+    .menu-category h3 { color: #8B0000; margin-bottom: 1rem; font-size: 1.5rem; }
+    .menu-items-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .menu-item {
+      background: #fff5e6;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .menu-item:hover { transform: translateY(-5px); box-shadow: 0 8px 12px rgba(0,0,0,0.2); }
+    .menu-item p { font-weight: bold; color: #222; }
+
+    /* Gallery placeholder */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .gallery-item {
+      height: 150px;
+      background: linear-gradient(45deg, #FFB703, #E63946);
+      border-radius: 10px;
+    }
+
+    /* Contact */
+    .contact p { text-align: center; margin-bottom: 1rem; font-size: 1.1rem; }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background: #222;
+      color: #fff;
+      padding: 2rem 1rem;
+      margin-top: 4rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.2rem; }
+      .cta-btn { padding: 0.8rem 1.5rem; }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Header / Hero Slider -->
-  <header class="hero-slider">
-    <div class="slides">
-      <img src="images/photo1.jpg" class="slide active" alt="Restaurant photo 1">
-      <img src="images/photo2.jpg" class="slide" alt="Restaurant photo 2">
-      <img src="images/photo3.jpg" class="slide" alt="Restaurant photo 3">
-    </div>
-    <div class="overlay">
-      <h1>GBChinese</h1>
-      <p>Authentic Chinese Flavors in Lahore</p>
-      <a href="tel:03405118451" class="cta-btn">Call to Order</a>
-    </div>
+  <!-- Header -->
+  <header>
+    <h1>GBChinese</h1>
+    <p>Authentic Chinese Flavors in Lahore</p>
+    <a href="tel:03405118451" class="cta-btn">Call to Order</a>
   </header>
 
-  <!-- About Section -->
+  <!-- About -->
   <section class="about">
     <h2>About Us</h2>
     <p>Welcome to GBChinese! Enjoy cozy outdoor seating and delicious Chinese cuisine. Open 5PM–3AM.</p>
   </section>
 
-  <!-- Menu Section with Images -->
+  <!-- Menu -->
   <section class="menu">
     <h2>Our Menu</h2>
 
-    <!-- Soups -->
     <div class="menu-category">
       <h3>Soups</h3>
       <div class="menu-items-grid">
-        <div class="menu-item">
-          <img src="images/dish_soup1.jpg" alt="Hot & Sour Soup">
-          <p>Hot & Sour Soup — PKR 1,070</p>
-        </div>
-        <div class="menu-item">
-          <img src="images/dish_soup2.jpg" alt="Special Chinese Soup">
-          <p>Special Chinese Soup — PKR 1,225</p>
-        </div>
-        <div class="menu-item">
-          <img src="images/dish_soup3.jpg" alt="Chicken Corn Soup">
-          <p>Chicken Corn Soup — PKR 1,050</p>
-        </div>
+        <div class="menu-item"><p>Hot & Sour Soup — PKR 1,070</p></div>
+        <div class="menu-item"><p>Special Chinese Soup — PKR 1,225</p></div>
+        <div class="menu-item"><p>Chicken Corn Soup — PKR 1,050</p></div>
       </div>
     </div>
 
-    <!-- Starters -->
     <div class="menu-category">
       <h3>Starters</h3>
       <div class="menu-items-grid">
-        <div class="menu-item">
-          <img src="images/dish_starter1.jpg" alt="Fried Wonton">
-          <p>Fried Wonton — PKR 1,370</p>
-        </div>
-        <div class="menu-item">
-          <img src="images/dish_starter2.jpg" alt="Salt & Pepper Winglets">
-          <p>Salt & Pepper Winglets — PKR 780</p>
-        </div>
-        <div class="menu-item">
-          <img src="images/dish_starter3.jpg" alt="Crispy Spring Rolls">
-          <p>Crispy Spring Rolls — PKR 1,170</p>
-        </div>
+        <div class="menu-item"><p>Fried Wonton — PKR 1,370</p></div>
+        <div class="menu-item"><p>Salt & Pepper Winglets — PKR 780</p></div>
+        <div class="menu-item"><p>Crispy Spring Rolls — PKR 1,170</p></div>
       </div>
     </div>
 
-    <!-- Chicken Main Courses -->
     <div class="menu-category">
       <h3>Chicken Main Courses</h3>
       <div class="menu-items-grid">
-        <div class="menu-item">
-          <img src="images/dish_chicken1.jpg" alt="Chicken Manchurian">
-          <p>Chicken Manchurian — PKR 1,545</p>
-        </div>
-        <div class="menu-item">
-          <img src="images/dish_chicken2.jpg" alt="Sweet & Sour Chicken">
-          <p>Sweet & Sour Chicken — PKR 1,670</p>
-        </div>
-        <div class="menu-item">
-          <img src="images/dish_chicken3.jpg" alt="Honey Sesame Chicken">
-          <p>Honey Sesame Chicken — PKR 1,430</p>
-        </div>
+        <div class="menu-item"><p>Chicken Manchurian — PKR 1,545</p></div>
+        <div class="menu-item"><p>Sweet & Sour Chicken — PKR 1,670</p></div>
+        <div class="menu-item"><p>Honey Sesame Chicken — PKR 1,430</p></div>
       </div>
     </div>
-
   </section>
 
-  <!-- Gallery Section -->
+  <!-- Gallery placeholder -->
   <section class="gallery">
     <h2>Gallery</h2>
     <div class="gallery-grid">
-      <img src="images/photo4.jpg" alt="Restaurant photo">
-      <img src="images/photo5.jpg" alt="Restaurant photo">
-      <img src="images/photo6.jpg" alt="Restaurant photo">
-      <img src="images/photo7.jpg" alt="Restaurant photo">
+      <div class="gallery-item"></div>
+      <div class="gallery-item"></div>
+      <div class="gallery-item"></div>
+      <div class="gallery-item"></div>
     </div>
   </section>
 
-  <!-- Contact & Location -->
+  <!-- Contact -->
   <section class="contact">
     <h2>Visit Us</h2>
     <p>Address: C1, College Rd, near Savor Foods Township, Block 1 Sector C-1, Lahore, 54770</p>
     <p>Phone: 0340 5118451</p>
     <p>Hours: 5PM–3AM</p>
-    <div class="map">
-      <iframe 
-        src="https://www.google.com/maps?q=C1,College Rd,Lahore&output=embed"
-        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
   </section>
 
   <footer>
     <p>© 2026 GBChinese. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
